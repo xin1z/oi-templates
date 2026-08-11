@@ -4,8 +4,7 @@
 #include <time.h>
 #endif
 
-int main()
-{
+int main() {
 #ifdef XIN_LOCAL
   // Measure total runtime
   // Since nobody likes TLE...

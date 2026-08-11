@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <iostream>
+#include <stdio.h>
 
 #ifdef XIN_LOCAL
 #include <chrono>
@@ -9,8 +9,7 @@ using namespace std;
 
 // Let's do it in a modern way:
 // Trailing return type!
-auto main() -> int
-{
+auto main() -> int {
 #ifdef XIN_LOCAL
   // Measure total runtime
   // Since nobody likes TLE...
@@ -25,11 +24,11 @@ auto main() -> int
   // End of solution
 #ifdef XIN_LOCAL
   auto end = chrono::high_resolution_clock::now();
-  auto duration = chrono::duration_cast<chrono::milliseconds>(end - start).count();
+  auto duration =
+      chrono::duration_cast<chrono::milliseconds>(end - start).count();
 
   cout << "Time taken: " << duration << " ms" << endl;
 #endif
 
   return 0;
 }
-
